@@ -357,32 +357,35 @@ display: none;
 Analysis workshop</h1>
 <div id="date-november-19th-2025" class="section level3">
 <h3>📅 Date: November 19th, 2025</h3>
-<p><strong> This workshop offers a hands-on, practical introduction to
-gene set over-representation and functional enrichment analysis, with an
-emphasis on real-world applications and interpretation of results.
-Participants will learn the foundational concepts behind functional
-enrichment, explore both over-representation analysis and gene set
-enrichment analysis (GSEA), and gain direct experience running
-enrichment workflows. A key component of the workshop is learning to use
-our group-developed applications available at </strong><a href="https://biocoreapps.bsd.uchicago.edu/" class="uri">https://biocoreapps.bsd.uchicago.edu/</a><strong>, where
+<p>**</p>
+<p>This workshop offers a hands-on, practical introduction to gene set
+over-representation and functional enrichment analysis, with an emphasis
+on real-world applications and interpretation of results. Participants
+will learn foundational concepts behind functional enrichment, explore
+both over-representation analysis and gene set enrichment analysis
+(GSEA), and gain direct experience running enrichment workflows.</p>
+<p>A key component of the workshop is learning to use our
+group-developed applications available at <strong><a href="https://biocoreapps.bsd.uchicago.edu/" class="uri">https://biocoreapps.bsd.uchicago.edu/</a></strong>, where
 participants will conduct gene set over-representation analysis using
-the </strong>Functional Enrichment Analysis** application and visualize
-results through the <strong>Functional Enrichment Visualization</strong>
-application. We will also provide an introduction to an R script that
-demonstrates how to implement each step of gene set over-representation
-analysis programmatically. **</p>
+the <strong>Functional Enrichment Analysis</strong> application and
+visualize results through the <strong>Functional Enrichment
+Visualization</strong> application.</p>
+<p>We will also introduce an R script that demonstrates how to implement
+each step of gene set over-representation analysis programmatically.
+**</p>
+<hr />
 </div>
-<div id="workshop-agenda-functional-enrichment-and-gene-set-over-representation-analysis" class="section level3">
-<h3>🔬 Workshop Agenda: Functional Enrichment and Gene Set
-Over-Representation Analysis</h3>
-<p>This workshop will guide participants through the essential steps of
-functional enrichment analysis and gene set over-representation analysis
-using our group-developed applications and R scripts. It will primarily
-focus on a series of foundational, hands-on sessions designed to
-introduce practical approaches for analyzing gene sets and interpreting
-biological results.</p>
+<div id="workshop-agenda-functional-enrichment-gene-set-over-representation-analysis" class="section level2">
+<h2>🔬 Workshop Agenda: Functional Enrichment &amp; Gene Set
+Over-Representation Analysis</h2>
+<p>This workshop will guide participants through essential steps of
+functional enrichment and gene set over-representation analysis using
+our group-developed applications and R scripts. It is centered on a
+series of foundational, hands-on sessions designed to introduce
+practical approaches for analyzing gene sets and interpreting biological
+results.</p>
 <ul>
-<li><strong>Prerequisite Preparation: Access to CRI’s HPC Environment
+<li><strong>1. Prerequisite Preparation: Access to CRI’s HPC Environment
 (randi)</strong>
 <ul>
 <li>Learn how to access and log into CRI’s randi HPC</li>
@@ -396,13 +399,14 @@ enrichment analysis (GSEA)</li>
 <li><strong>3. 🧪 Hands-on: Using the Functional Enrichment Analysis
 Application</strong>
 <ul>
-<li>Perform ORA with your gene lists using <strong><a href="https://biocoreapps.bsd.uchicago.edu/">Biocore
-Applications</a></strong></li>
+<li>Perform ORA with your gene lists using <strong><a href="https://biocoreapps.bsd.uchicago.edu/gsea_shiny/">Biocore
+Developed GSOR Applications</a></strong></li>
 </ul></li>
 <li><strong>4. 🧪 Hands-on: Visualizing Results with Functional
 Enrichment Visualization</strong>
 <ul>
-<li>Generate pathway and GO term plots using the visualization tool</li>
+<li>Visualize enrichment analysis results using <strong><a href="https://biocoreapps.bsd.uchicago.edu/feavisapp/">Biocore Developed
+Visualization Applications</a></strong></li>
 </ul></li>
 <li><strong>5. 🧪 Hands-on: Implementing ORA via R Scripts</strong>
 <ul>
@@ -411,94 +415,102 @@ Enrichment Visualization</strong>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> Please share your feedback on topics you’d
-like to see covered, or any questions you have for our workshop learning
-series, either through <a href="https://mycri.cri.uchicago.edu/educations/trainings/79/survey/">this
-survey link</a> or by emailing me at <a href="mailto:yli22@bsd.uchicago.edu" class="email">yli22@bsd.uchicago.edu</a>.</p>
+like to see covered, or any questions for our workshop learning series,
+either through <a href="https://mycri.cri.uchicago.edu/educations/trainings/79/survey/">this
+survey link</a> or by emailing <strong><a href="mailto:yli22@bsd.uchicago.edu" class="email">yli22@bsd.uchicago.edu</a></strong>.</p>
 </blockquote>
 <hr />
 </div>
-<div id="prerequisite-preparations" class="section level3">
-<h3>🛠 Prerequisite Preparations</h3>
+<div id="prerequisite-preparations" class="section level2">
+<h2>🛠 Prerequisite Preparations</h2>
 <ul>
-<li><strong>Prerequisite: Access to CRI’s HPC Environment
-(randi)</strong>
-<ul>
-<li>Learn how to access and log into CRI’s randi HPC (<a href="./doc/randi_hpc_access.md">Instructions</a>)</li>
-</ul></li>
-<li><strong>Prerequisite: RStudio Access with XQuartz</strong>
-<ul>
-<li>Setup and access instructions are provided <a href="./doc/rstudio_xquartz_windows_setup.md">here</a></li>
-</ul></li>
+<li><p><strong>Access to CRI’s HPC Environment (randi)</strong><br />
+Instructions available here:
+<code>./doc/randi_hpc_access.md</code></p></li>
+<li><p><strong>RStudio Access with XQuartz</strong><br />
+Setup instructions available here:
+<code>./doc/rstudio_xquartz_setup.md</code></p></li>
 </ul>
 <hr />
 </div>
-<div id="introduction-to-functional-enrichment-analysis" class="section level3">
-<h3>1. Introduction to Functional Enrichment Analysis</h3>
+<div id="introduction-to-functional-enrichment-analysis" class="section level2">
+<h2>1. Introduction to Functional Enrichment Analysis</h2>
 <p>Functional enrichment analysis allows researchers to interpret gene
-lists in a biological context, identifying over-represented pathways,
+lists in a biological context by identifying over-represented pathways,
 gene ontology (GO) terms, and biological processes.</p>
-<p><strong>Key Concepts:</strong></p>
+<div id="key-concepts" class="section level3">
+<h3><strong>Key Concepts</strong></h3>
 <ul>
 <li>🧬 <strong>Gene Set Over-Representation Analysis (ORA):</strong>
-Tests whether specific gene sets are statistically enriched in your
-list.</li>
+Tests whether specific gene sets are statistically enriched in a list of
+genes.</li>
 <li>📊 <strong>Gene Set Enrichment Analysis (GSEA):</strong> Evaluates
-whether predefined gene sets show significant trends across the entire
-ranked list.</li>
+whether predefined gene sets show significant patterns across an entire
+ranked gene list.</li>
 <li>🎯 Applications provide visual summaries for easier
 interpretation.</li>
 </ul>
 <hr />
 </div>
-<div id="using-biocore-applications" class="section level3">
-<h3>2. Using Biocore Applications</h3>
-<p>The workshop focuses on our group-developed applications, available
-at <strong><a href="https://biocoreapps.bsd.uchicago.edu/" class="uri">https://biocoreapps.bsd.uchicago.edu/</a></strong>:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Functional Enrichment Analysis</strong>
+</div>
+<div id="using-biocore-applications" class="section level2">
+<h2>2. Using Biocore Applications</h2>
+<p>This workshop focuses on our group-developed applications, available
+at <strong><a href="https://biocoreapps.bsd.uchicago.edu/" class="uri">https://biocoreapps.bsd.uchicago.edu/</a></strong>.</p>
+<div id="functional-enrichment-analysis" class="section level3">
+<h3><strong>1. Functional Enrichment Analysis</strong></h3>
 <ul>
+<li><a href="https://biocoreapps.bsd.uchicago.edu/gsea_shiny/" class="uri">https://biocoreapps.bsd.uchicago.edu/gsea_shiny/</a></li>
 <li>Input your gene list to perform ORA.</li>
 <li>Explore enrichment scores, p-values, and FDR-adjusted
 significance.</li>
-</ul></li>
-<li><strong>Functional Enrichment Visualization</strong>
+</ul>
+</div>
+<div id="functional-enrichment-visualization" class="section level3">
+<h3><strong>2. Functional Enrichment Visualization</strong></h3>
 <ul>
+<li><a href="https://biocoreapps.bsd.uchicago.edu/feavisapp/" class="uri">https://biocoreapps.bsd.uchicago.edu/feavisapp/</a></li>
 <li>Visualize pathways and enriched GO terms.</li>
 <li>Generate bar plots, dot plots, and network diagrams for
 interpretation.</li>
-</ul></li>
-</ol>
+</ul>
 <hr />
 </div>
-<div id="hands-on-running-analysis-with-r-scripts" class="section level3">
-<h3>3. Hands-on: Running Analysis with R Scripts</h3>
+</div>
+<div id="workshop-dataset" class="section level2">
+<h2>3. Workshop Dataset</h2>
+<p>The workshop dataset is derived from the published single-cell
+RNA-seq study of the human ovary.</p>
+<div id="reference" class="section level3">
+<h3><strong>Reference</strong></h3>
+<p><em>Zhou et al., “Single-cell analysis of human ovarian tissue
+identifies cell populations and lineage trajectories”</em><br />
+Cell Reports (2022)</p>
+</div>
+<div id="dataset-details" class="section level3">
+<h3><strong>Dataset Details</strong></h3>
+<ul>
+<li>Based on scRNA-seq profiling of human ovary</li>
+<li>Includes multiple identified cell clusters</li>
+<li>Workshop files are provided inside the <code>test_data_input</code>
+folder, containing identified over-represented genes for each cell
+type</li>
+</ul>
+<p>These files will be used directly in the enrichment applications and
+R scripts.</p>
+<hr />
+</div>
+</div>
+<div id="hands-on-running-analysis-with-r-scripts" class="section level2">
+<h2>4. Hands-on: Running Analysis with R Scripts</h2>
 <p>For participants preferring programmatic approaches, we provide R
-scripts that demonstrate:</p>
-<ol style="list-style-type: decimal">
-<li>Loading your gene list and background genes</li>
-<li>Performing over-representation analysis</li>
-<li>Extracting significant pathways and GO terms</li>
-<li>Generating basic visualizations</li>
-</ol>
-<p>This session will allow participants to learn how to reproduce
-application-based analysis via R scripting.</p>
-<hr />
-</div>
-<div id="functional-enrichment-analysis-workflow" class="section level3">
-<h3>4. Functional Enrichment Analysis Workflow</h3>
-<p>The workflow for gene set over-representation analysis typically
-involves:</p>
-<ol style="list-style-type: decimal">
-<li>Preparing your gene list and background set</li>
-<li>Running enrichment analysis (via applications or R scripts)</li>
-<li>Visualizing and interpreting results</li>
-<li>Optional downstream integration with other omics data</li>
-</ol>
-<p><img role="img" src="./images/functional-enrichment-workflow.png" /></p>
+scripts demonstrating GSOR analysis. This hands-on session will show
+participants how to reproduce application-based analysis
+programmatically.</p>
 <blockquote>
-<p><strong>Note:</strong> Participants can run these applications
-directly on <code>randi</code> via X11 forwarding with RStudio or
-locally on their machine with R installed for script-based analysis.</p>
+<p><strong>Note:</strong> Participants may run these applications
+directly on <code>randi</code> via X11 forwarding with RStudio, or
+locally with an R installation.</p>
 </blockquote>
 </div>
 </div>
