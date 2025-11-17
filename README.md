@@ -24,8 +24,10 @@ We will also introduce an R script that demonstrates how to implement each step 
 
 This workshop will guide participants through essential steps of functional enrichment and gene set over-representation analysis using our group-developed applications and R scripts. It is centered on a series of foundational, hands-on sessions designed to introduce practical approaches for analyzing gene sets and interpreting biological results.
 
-- **1. Prerequisite Preparation: Access to CRI's HPC Environment (randi)**
-  - Learn how to access and log into CRI's randi HPC
+- **1. Prerequisite Preparation: Access to CRI's HPC Environment (randi) and initiate rstudio analysis working enviroment**
+  - Learn how to access and log into CRI's randi HPC to intiate rstudio environment for **'section5 hands-on'**
+  - ➡️ **[Go to Section 1:  RStudio Access on Randi](#./docs/rstudio_xquartz_setup.md)**
+
 
 - **2. Overview of Functional Enrichment Analysis Concepts**
   - Introduction to over-representation analysis (ORA) and gene set enrichment analysis (GSEA)
