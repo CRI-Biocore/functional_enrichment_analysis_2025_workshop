@@ -26,71 +26,128 @@ This document provides step-by-step instructions to access RStudio on the CRI HP
 
 ## Steps to Access RStudio on Randi
 
-1. **Request an interactive job on Randi**
+1. **Log into Randi**
+To access randi, use the SSH command below with your assigned BSDID and password:
+
+```
+ssh your_username@randi.cri.uchicago.edu
+```
+
+After logging in successfully, you should see a screen similar to the following:
+
+![](../images/randi-login-screenshot.png)
+
+
+2. **Request an interactive job on Randi**
+
+- without node reservation
 
 ```bash
-srun --mem=4Gb --pty --time=2-00:00:00 /bin/bash
+srun --mem=4Gb --pty --time=02:00:00 /bin/bash
+```
+
+- workshop with node reservation
+
+```bash
+srun --pty --reservation=workshop --mem=4GB --pty --time=02:00:00 /bin/bash
 ```
 
 - Wait for the job to be allocated resources.
 - You should see a prompt like:
 
-```bash
-[yli22@cri22cn063 lengyel-lab]$
-```
+![](../images/interactive_node_start.png)
 
-2. **Check network interfaces** (optional, for debugging)
+
+3. **Check network interfaces for ip address** 
 
 ```bash
 ip a
 ```
 
-3. **Connect via SSH with X11 forwarding from your local machine**
+- You should see something like:
 
-- **macOS:**
+![](../images/ip_a.png)
+
+
+4. **Open a new terminal, then connect via SSH with X11 forwarding from your local machine**
+
+Open a **new terminal**, and login to your assigned interactive node with above provided ip address. 
+
+> **Note:** make sure to open a new terminal to ensure your interactive node is still open for connection.
+During workshop all registered users will be gaven the reserved nodes, so you do not need to concern this.
+
 ```bash
-ssh -Y yli22@10.50.46.63
+ssh -Y yli22@10.50.46.8
 ```
-- **Windows (PuTTY):**
-  - Open PuTTY, configure X11 forwarding, and connect to `yli22@10.50.46.63`
 
-- The first time, confirm the authenticity of the host by typing `yes`.
-- You may see a message about registering the system with Red Hat Insights — this can be ignored for RStudio access.
+- You should see something like:
 
-4. **Load required modules and activate environment**
+![](../images/ip_login.png)
 
-Once logged in to the interactive node, run the following commands:
+
+5. **Load required modules**
+
+Once logged in to the interactive node, run the following commands to load required modules and confirm loading success:
 
 ```bash
 module load gcc/12.1.0
-module load mini
 module load miniconda3/24.9.2
+module list
 source activate /gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2
 ```
 
-- Verify paths and versions:
+- You should see something like:
+
+![](../images/module_load.png)
+
+6. **Activate pre-set computational environment**
+
+```bash
+source activate /gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2
+```
+
+- You should see something like:
+
+![](../images/conda_env.png)
+
+- Verify paths and versions in this pre-set conda environment:
 
 ```bash
 which R
-# /gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2/bin/R
 
 which python
-# /gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2/bin/python
 
 python --version
-# Python 3.14.0
 
 which rstudio
-# /gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2/bin/rstudio
 ```
 
-5. **Launch RStudio**
+- You should see something like:
+
+![](../images/conda_env2.png)
+
+6. **Launch RStudio**
 
 ```bash
 rstudio
 ```
 
 > **Note:** This will open RStudio on your local machine via X11 forwarding.
+
+- You should see a pop up window like this, then select 'ignore updates', then this rstudio is ready to use. 
+
+![](../images/rstudio_1.png)
+
+
+7. **Close computational environment**
+
+```bash
+conda deactivate
+exit
+```
+- You should see something like:
+
+![](../images/close_node_conda_env.png)
 
 ## Common X11‑related Issues
 

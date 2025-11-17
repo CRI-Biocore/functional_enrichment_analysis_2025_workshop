@@ -26,7 +26,7 @@ This workshop will guide participants through essential steps of functional enri
 
 - **1. Prerequisite Preparation: Access to CRI's HPC Environment (randi) and initiate rstudio analysis working enviroment**
   - Learn how to access and log into CRI's randi HPC to intiate rstudio environment for **'section5 hands-on'**
-  - ➡️ **[Go to Section 1: RStudio Access on Randi](./docs/rstudio_xquartz_setup.md)**
+  - ➡️ **[Go to Section 1: RStudio Access on Randi](./docs/rstudio_randi_quickstart.md)**
 
 
 - **2. Overview of Functional Enrichment Analysis Concepts**
