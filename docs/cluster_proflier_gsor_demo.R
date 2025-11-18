@@ -6,14 +6,19 @@ library(org.Hs.eg.db)
 library(enrichplot)
 ## ------------------------------------------------------------------------- ##
 ## 0. direct to your designated working directory
-workDir <- "/gpfs/data/biocore-workshop/functional_enrichment_workshop5"
+workDir <- getwd()
+## workDir <- ~
 setwd(workDir)
 ## ------------------------
 ## 1. conduct GSOR for one set of gene
-inputGeneList <- read.delim(file = 'test_data_input/gsorInput_EN.txt', sep = '\t', header = T)
+inputGeneList <- read.delim(file = '/gpfs/data/biocore-workshop/functional_enrichment_workshop5/test_data_input/gsorInput_EN.txt', sep = '\t', header = T)
 inputGeneList <- inputGeneList$gene
 geneIDres <- bitr(inputGeneList, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db")
 geneListEntrezID <- geneIDres$ENTREZID
+## ---------
+print(head(inputGeneList))
+print(length(geneListEntrezID))
+print(head(geneListEntrezID))
 ## ---------
 gsor.res1 <- enrichGO(gene          = geneListEntrezID, 
                       OrgDb         = "org.Hs.eg.db", 
@@ -39,10 +44,19 @@ gsor.res12 <- enrichGO(gene          = geneListEntrezID,
                       pAdjustMethod = 'BH',
                       pool          = T,
                       readable      = T)
+## ---------
 print(dim(gsor.res1))
 print(dim(gsor.res11))
 print(dim(gsor.res12))
-## GO Biological processing anlaysis.
+## ---------
+
+## ---------
+print(head(gsor.res1@result))
+print(dim(gsor.res1@result))
+print(dim(gsor.res11@result))
+print(dim(gsor.res12@result))
+## ---------
+## GO Biological processing analysis.
 gsor.res2 <- enrichGO(gene          = geneListEntrezID, 
                       OrgDb         = "org.Hs.eg.db", 
                       ont           = 'BP',
@@ -58,26 +72,26 @@ gsor.res3 <- enrichKEGG(gene = geneListEntrezID,
                         minGSSize = 10, maxGSSize = 500, 
                         qvalueCutoff  = 0.05, 
                         pAdjustMethod = 'BH')
-
-
-barplot(gsor.res11, showCategory=20) 
+## ---------
+print(head(gsor.res1))
+## ---------
 dotplot(gsor.res12, showCategory=20) 
 
-barplot(gsor.res3, showCategory=10) 
 dotplot(gsor.res3, showCategory=10) 
 
 ## ------------------------------------------------------------------------- ##
 ## 2. conduct GSOR for a set of gene lists
-inputfiles <- list('IR1' = 'test_data_input/gsorInput_IM1.txt', 
-                   'IR2' = 'test_data_input/gsorInput_IM2.txt', 
-                   'ST1' = 'test_data_input/gsorInput_ST1.txt', 
-                   'ST2' = 'test_data_input/gsorInput_ST2.txt')
+inputfiles <- list('IR1' = '/gpfs/data/biocore-workshop/functional_enrichment_workshop5/test_data_input/gsorInput_IM1.txt', 
+                   'IR2' = '/gpfs/data/biocore-workshop/functional_enrichment_workshop5/test_data_input/gsorInput_IM2.txt', 
+                   'ST1' = '/gpfs/data/biocore-workshop/functional_enrichment_workshop5/test_data_input/gsorInput_ST1.txt', 
+                   'ST2' = '/gpfs/data/biocore-workshop/functional_enrichment_workshop5/test_data_input/gsorInput_ST2.txt')
 
 inputGeneLists <- lapply(inputfiles, function(f) {
   res <- read.delim(f, sep = "\t", header = TRUE, stringsAsFactors = FALSE)
   genes <- res$gene
   return(genes)
 })
+
 
 geneListsEntrezID <- lapply(inputGeneLists, function(glist) {
   geneIDlist <- bitr(
@@ -89,6 +103,10 @@ geneListsEntrezID <- lapply(inputGeneLists, function(glist) {
   geneIDlist$ENTREZID
 })
 
+## --------
+print(str(inputGeneLists))
+print(str(geneListsEntrezID))
+## --------
 
 gsor.cluster.res1 <- compareCluster(geneCluster   = geneListsEntrezID, 
                                     fun           = 'enrichGO',
@@ -118,7 +136,11 @@ gsor.cluster.res3 <- compareCluster(geneCluster   = geneListsEntrezID,
                                     qvalueCutoff  = 1, 
                                     pAdjustMethod = 'BH')
 
-dotplot(gsor.cluster.res1)
-dotplot(gsor.cluster.res2)
-dotplot(gsor.cluster.res3)
+## --------
+print(head(gsor.cluster.res1))
+## --------
+
+enrichplot::dotplot(gsor.cluster.res1)
+enrichplot::dotplot(gsor.cluster.res2)
+enrichplot::dotplot(gsor.cluster.res3)
 ## ------------------------------------------------------------------------- ##

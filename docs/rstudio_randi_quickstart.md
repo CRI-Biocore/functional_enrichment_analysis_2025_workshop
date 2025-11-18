@@ -79,7 +79,7 @@ ssh -Y yli22@<node-ip>
 module load gcc/12.1.0
 module load miniconda3/24.9.2
 module list
-source activate /gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2
+export LD_LIBRARY_PATH=/gpfs/data/biocore-workshop/functional_enrichment_workshop5/gsor_Nov25_v2/lib:$LD_LIBRARY_PATH
 ```
 
 - Example output:
