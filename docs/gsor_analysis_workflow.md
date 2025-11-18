@@ -8,7 +8,9 @@ It covers Gene Ontology (GO), GO Biological Process (GO BP), and KEGG pathway en
 
 The full code is also available at:
 - Workshop lab share: `/gpfs/data/biocore-workshop/functional_enrichment_workshop5/cluster_proflier_gsor_demo.R`
-
+```
+cp /gpfs/data/biocore-workshop/functional_enrichment_workshop5/cluster_proflier_gsor_demo.R ~
+```
 ---
 
 ## Required Libraries
@@ -20,7 +22,7 @@ library(enrichplot)
 
 ## 0. Set Working Directory
 ```r
-workDir <- "/gpfs/data/biocore-workshop/functional_enrichment_workshop5"
+workDir <- getwd()
 setwd(workDir)
 ```
 
