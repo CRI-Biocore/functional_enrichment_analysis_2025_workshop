@@ -33,7 +33,7 @@ This workshop will guide participants through essential steps of functional enri
   - Introduction to over-representation analysis (ORA) and gene set enrichment analysis (GSEA)
 
 - **3. 🧪 Hands-on: Using the Functional Enrichment Analysis Application**
-  - Perform ORA with your gene lists using **[Biocore Developed GSOR Applications](https://biocoreapps.bsd.uchicago.edu/gsea_shiny/)**
+  - Perform ORA with your gene lists using **[Biocore Developed GSOR Applications](https://biocoreapps.bsd.uchicago.edu/gsea_shiny/){:target="_blank"}**
 
 - **4. 🧪 Hands-on: Visualizing Results with Functional Enrichment Visualization**
   - Visualize enrichment analysis results using **[Biocore Developed Visualization Applications](https://biocoreapps.bsd.uchicago.edu/feavisapp/)**
@@ -45,23 +45,13 @@ This workshop will guide participants through essential steps of functional enri
 
 ---
 
-## 🛠 Prerequisite Preparations
-
-- **Access to CRI's HPC Environment (randi)**  
-  Instructions available here: `./doc/randi_hpc_access.md`
-
-- **RStudio Access with XQuartz**  
-  Setup instructions available here: `./doc/rstudio_xquartz_setup.md`
-
----
-
 ## 1. Introduction to Functional Enrichment Analysis
 
 Functional enrichment analysis allows researchers to interpret gene lists in a biological context by identifying over-represented pathways, gene ontology (GO) terms, and biological processes.
 
 ### **Key Concepts**
 
-- 🧬 **Gene Set Over-Representation Analysis (ORA):** Tests whether specific gene sets are statistically enriched in a list of genes.
+- 🧬 **Gene Set Over-Representation Analysis (GSOR):** Tests whether specific gene sets are statistically enriched in a list of genes.
 - 📊 **Gene Set Enrichment Analysis (GSEA):** Evaluates whether predefined gene sets show significant patterns across an entire ranked gene list.
 - 🎯 Applications provide visual summaries for easier interpretation.
 
@@ -88,8 +78,10 @@ This workshop focuses on our group-developed applications, available at **https:
 The workshop dataset is derived from the published single-cell RNA-seq study of the human ovary.
 
 ### **Reference**
-*Zhou et al., "Single-cell analysis of human ovarian tissue identifies cell populations and lineage trajectories"*  
-Cell Reports (2022)
+
+[*Lengyel E, Li Y et al., "A molecular atlas of the human postmenopausal fallopian tube and ovary from single-cell RNA and ATAC sequencing."*  
+Cell Reports (2022)](https://www.cell.com/cell-reports/fulltext/S2211-1247(22)01044-3)
+
 
 ### **Dataset Details**
 - Based on scRNA-seq profiling of human ovary
@@ -102,7 +94,8 @@ These files will be used directly in the enrichment applications and R scripts.
 
 ## 4. Hands-on: Running Analysis with R Scripts
 
-For participants preferring programmatic approaches, we provide R scripts demonstrating GSOR analysis. This hands-on session will show participants how to reproduce application-based analysis programmatically.
+For participants preferring programmatic approaches, we provide R scripts demonstrating GSOR analysis. 
+This hands-on session will show participants how to reproduce application-based analysis programmatically for single and multiple gene sets respectively.
 
 > **Note:** Participants may run these applications directly on `randi` via X11 forwarding with RStudio, or locally with an R installation.
 
