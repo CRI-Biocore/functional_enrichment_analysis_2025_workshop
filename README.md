@@ -95,7 +95,10 @@ These files will be used directly in the enrichment applications and R scripts.
 ## 4. Hands-on: Running Analysis with R Scripts
 
 For participants preferring programmatic approaches, we provide R scripts demonstrating GSOR analysis. 
-This hands-on session will show participants how to reproduce application-based analysis programmatically for single and multiple gene sets respectively.
+This hands-on session will show participants how to reproduce application-based analysis programmatically for single and multiple gene sets respectively. 
+The demonstration is accessible via 1) [rstudio initiation on randi](./docs/rstudio_randi_quickstart.md); and 
+2) [single and multiple gene sets over-representation analysis via clusterProfiler](./docs/gsor_analysis_workflow.md) where 
+r script is directly available [Here](./docs/cluster_proflier_gsor_demo.R). 
 
 > **Note:** Participants may run these applications directly on `randi` via X11 forwarding with RStudio, or locally with an R installation.
 
