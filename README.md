@@ -33,7 +33,7 @@ This workshop will guide participants through essential steps of functional enri
   - Introduction to over-representation analysis (ORA) and gene set enrichment analysis (GSEA)
 
 - **3. 🧪 Hands-on: Using the Functional Enrichment Analysis Application**
-  - Perform ORA with your gene lists using **[Biocore Developed GSOR Applications](https://biocoreapps.bsd.uchicago.edu/gsea_shiny/){:target="_blank"}**
+  - Perform ORA with your gene lists using **[Biocore Developed GSOR Applications](https://biocoreapps.bsd.uchicago.edu/gsea_shiny/)**
 
 - **4. 🧪 Hands-on: Visualizing Results with Functional Enrichment Visualization**
   - Visualize enrichment analysis results using **[Biocore Developed Visualization Applications](https://biocoreapps.bsd.uchicago.edu/feavisapp/)**
