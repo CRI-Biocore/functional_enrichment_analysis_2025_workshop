@@ -17,7 +17,9 @@ visualize results through the **Functional Enrichment Visualization** applicatio
 We will also introduce an R script that demonstrates how to implement each step of gene set over-representation analysis programmatically.
 **
 
+---
 
+> **Note:** Workshop slides can be downloaded **[HERE](./docs/Presentation_Nov2025_functional_enrichment_analysis.pdf)**
 ---
 
 ## 🔬 Workshop Agenda: Functional Enrichment & Gene Set Over-Representation Analysis
